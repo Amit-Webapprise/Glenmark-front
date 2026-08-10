@@ -1,10 +1,28 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ManageActivity() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.$) {
+      window.$('.select2').each(function () {
+        window.$(this).select2({
+          dropdownParent: window.$(this).parent(),
+        });
+      });
+      
+      if (window.$.fn.sortable) {
+        window.$(".all_img_gallery").sortable({
+          connectWith: ".connected-sortable",
+          stack: '.connected-sortable ul'
+        }).disableSelection();
+      }
+    }
+  }, []);
+
   return (
     <div className="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
       <Sidebar />
@@ -39,8 +57,8 @@ export default function ManageActivity() {
                     Filter
                     <span className="fixed_view_filter">1</span>
                   </a>
-                  {isFilterOpen && (
-                    <div className="filter_view">
+                  
+                    <div className="filter_view" style={{ display: isFilterOpen ? "block" : "none" }}>
                       <div className="filter_box">
                         <div className="flter_br">
                           <div className="row">
@@ -94,7 +112,6 @@ export default function ManageActivity() {
 
                       </div>
                     </div>
-                  )}
                 </div>
               </div>
 

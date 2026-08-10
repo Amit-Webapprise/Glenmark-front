@@ -18,7 +18,7 @@ function App() {
         <Route path="/create-webinar" element={<PlaceholderPage title="Create Webinar" />} />
         <Route path="/doctor-landing-page" element={<PlaceholderPage title="Doctor Landing Page" />} />
         <Route path="/draft" element={<PlaceholderPage title="Draft" />} />
-        <Route path="/in-all-activity" element={<PlaceholderPage title="In All Activity" />} />
+        <Route path="/in-all-activity" element={<InAllActivity />} />
         <Route path="/mail-campaign-manage" element={<PlaceholderPage title="Mail Campaign Manage" />} />
         <Route path="/mail-campaign-template" element={<PlaceholderPage title="Mail Campaign Template" />} />
         <Route path="/manage-activity" element={<ManageActivity />} />

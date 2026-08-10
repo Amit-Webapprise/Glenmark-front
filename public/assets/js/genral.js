@@ -133,11 +133,11 @@ setTimeout(function(){
 
 
     //sidetoggle
-    $('.toggle_bar').on('click', function () {
+    $('.toggle_bar').on('click', '.toggle_bar', function () {
         $('.logout_bt').slideToggle();
     });
 
-    $(".profile_detiles .dropdown-toggle").click(function () {
+    $(document).on("click", ".profile_detiles .dropdown-toggle", function () {
         $(".user_name_detiles").slideToggle();
     });
 
