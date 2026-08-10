@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Sidebar() {
+  const [openMenu, setOpenMenu] = useState("");
+
+  const toggleMenu = (menu) => {
+    setOpenMenu(openMenu === menu ? "" : menu);
+  };
+
   return (
     <>
       <aside className="left-sidebar">
@@ -33,14 +40,14 @@ export default function Sidebar() {
 
               </li>
               <li className="sidebar-item">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("manage_activity"); }} aria-expanded={openMenu === "manage_activity"}>
                   <span>
                     <i className="fa-regular fa-images"></i>
                   </span>
                   <span className="hide-menu"> Manage Activity </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "manage_activity" ? " show" : "")} style={{ display: openMenu === "manage_activity" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/manage-activity" aria-expanded="false">
                       <span className="show_active">
@@ -62,14 +69,14 @@ export default function Sidebar() {
               </li>
 
               <li className="sidebar-item ">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("whatsapp"); }} aria-expanded={openMenu === "whatsapp"}>
                   <span>
                     <i className="fa-brands fa-whatsapp"></i>
                   </span>
                   <span className="hide-menu">WhatsApp </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "whatsapp" ? " show" : "")} style={{ display: openMenu === "whatsapp" ? "block" : "none" }}>
 
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/whatsapp-campaign-template" aria-expanded="false">
@@ -93,14 +100,14 @@ export default function Sidebar() {
                 </ul>
               </li>
               <li className="sidebar-item ">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("mail"); }} aria-expanded={openMenu === "mail"}>
                   <span>
                     <i className="fa-regular fa-envelope"></i>
                   </span>
                   <span className="hide-menu">Mail </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "mail" ? " show" : "")} style={{ display: openMenu === "mail" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/mail-campaign-template" aria-expanded="false">
                       <span className="show_active">
@@ -147,14 +154,14 @@ export default function Sidebar() {
               </li>
 
               <li className="sidebar-item">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("fb_live"); }} aria-expanded={openMenu === "fb_live"}>
                   <span>
                     <i className="fa-brands fa-facebook-f"></i>
                   </span>
                   <span className="hide-menu"> FB Live </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "fb_live" ? " show" : "")} style={{ display: openMenu === "fb_live" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/topic" aria-expanded="false">
                       <span className="show_active">
@@ -185,14 +192,14 @@ export default function Sidebar() {
 
               </li>
               <li className="sidebar-item">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("ecme"); }} aria-expanded={openMenu === "ecme"}>
                   <span>
                     <i className="fa-solid fa-arrows-to-dot"></i>
                   </span>
                   <span className="hide-menu"> eCME </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "ecme" ? " show" : "")} style={{ display: openMenu === "ecme" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/create-webinar" aria-expanded="false">
                       <span className="show_active">
@@ -264,14 +271,14 @@ export default function Sidebar() {
               </li>
 
               <li className="sidebar-item">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("marketing_activity"); }} aria-expanded={openMenu === "marketing_activity"}>
                   <span>
                     <i className="fa-solid fa-arrows-to-eye"></i>
                   </span>
                   <span className="hide-menu"> Marketing Activity </span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "marketing_activity" ? " show" : "")} style={{ display: openMenu === "marketing_activity" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/activity-library" aria-expanded="false">
                       <span className="show_active">
@@ -354,14 +361,14 @@ export default function Sidebar() {
               </li>
 
               <li className="sidebar-item ">
-                <Link className="sidebar-link" to="javascript:void(0)" aria-expanded="false">
+                <Link className="sidebar-link" to="#" onClick={(e) => { e.preventDefault(); toggleMenu("qms"); }} aria-expanded={openMenu === "qms"}>
                   <span>
                     <i className="fa-regular fa-comment-dots"></i>
                   </span>
                   <span className="hide-menu">QMS</span>
                   <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul className="submenu side_one">
+                <ul className={"submenu side_one" + (openMenu === "qms" ? " show" : "")} style={{ display: openMenu === "qms" ? "block" : "none" }}>
                   <li className="sidebar-item side_line_two">
                     <Link className="sidebar-link" to="/qms" aria-expanded="false">
                       <span className="show_active">
