@@ -21,7 +21,7 @@ function Login() {
     const newErrors = { username: '', password: '' };
 
     if (username.trim() === '') {
-      newErrors.username = 'User Name is required';
+      newErrors.username = 'This field is required';
       isValid = false;
     } else if (!validateEmail(username)) {
       newErrors.username = 'Please enter a valid email address';
@@ -29,7 +29,7 @@ function Login() {
     }
 
     if (password.trim() === '') {
-      newErrors.password = 'Password is required';
+      newErrors.password = 'This field is required';
       isValid = false;
     } else if (password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
@@ -69,7 +69,6 @@ function Login() {
                       setUsername(e.target.value);
                       if (errors.username) setErrors({ ...errors, username: '' });
                     }}
-                    style={{ borderColor: errors.username ? 'red' : '' }}
                   />
                   <i className="fa-regular fa-user"></i>
                 </div>
@@ -88,7 +87,6 @@ function Login() {
                       setPassword(e.target.value);
                       if (errors.password) setErrors({ ...errors, password: '' });
                     }}
-                    style={{ borderColor: errors.password ? 'red' : '' }}
                   />
                   <i
                     className={`fa-regular fa-eye righr_side ${showPassword ? 'rs_active' : ''}`}
