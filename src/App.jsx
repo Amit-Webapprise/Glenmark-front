@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import PlaceholderPage from './pages/PlaceholderPage';
+import ManageActivity from './pages/ManageActivity';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/in-all-activity" element={<PlaceholderPage title="In All Activity" />} />
         <Route path="/mail-campaign-manage" element={<PlaceholderPage title="Mail Campaign Manage" />} />
         <Route path="/mail-campaign-template" element={<PlaceholderPage title="Mail Campaign Template" />} />
-        <Route path="/manage-activity" element={<PlaceholderPage title="Manage Activity" />} />
+        <Route path="/manage-activity" element={<ManageActivity />} />
         <Route path="/manage-content-repository" element={<PlaceholderPage title="Manage Content Repository" />} />
         <Route path="/manage-mail-campaign" element={<PlaceholderPage title="Manage Mail Campaign" />} />
         <Route path="/manage-mail-campaign-create" element={<PlaceholderPage title="Manage Mail Campaign Create" />} />
