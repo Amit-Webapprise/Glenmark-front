@@ -21,7 +21,7 @@ function Login() {
     const newErrors = { username: '', password: '' };
 
     if (username.trim() === '') {
-      newErrors.username = 'This field is required';
+      newErrors.username = 'User Name is required';
       isValid = false;
     } else if (!validateEmail(username)) {
       newErrors.username = 'Please enter a valid email address';
@@ -29,10 +29,10 @@ function Login() {
     }
 
     if (password.trim() === '') {
-      newErrors.password = 'This field is required';
+      newErrors.password = 'Password is required';
       isValid = false;
     } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 8 characters';
+      newErrors.password = 'Password must be at least 6 characters';
       isValid = false;
     }
 

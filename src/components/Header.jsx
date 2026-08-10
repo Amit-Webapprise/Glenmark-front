@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
   return (
     <>
@@ -5,9 +7,9 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg navbar-light">
           <ul className="navbar-nav">
             <li className="nav-item d-block d-xl-none">
-              <a className="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+              <Link className="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" to="javascript:void(0)">
                 <i className="fa-solid fa-bars"></i>
-              </a>
+              </Link>
             </li>
             
           </ul>
@@ -24,16 +26,16 @@ export default function Header() {
 
                 </li>
               <li className="nav-item dropdown ms-2">
-                <a className="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                <Link className="nav-link nav-icon-hover" to="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   
                   SR
-                </a>
+                </Link>
                 <div className="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div className="message-body">
                     <span className="w-100 text-center d-block text-dark"> <i className="fa-regular fa-user me-1"></i> User Name </span>
-                    <a href="" className="btn btn-outline-primary mx-3 mt-2 d-block"  data-bs-toggle="modal" data-bs-target="#change_password">Change Password</a>
-                    <a href="./login.html" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <Link to="" className="btn btn-outline-primary mx-3 mt-2 d-block"  data-bs-toggle="modal" data-bs-target="#change_password">Change Password</Link>
+                    <Link to="/login" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</Link>
                   </div>
                 </div>
               </li>

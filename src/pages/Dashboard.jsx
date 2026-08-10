@@ -1,6 +1,6 @@
-import Sidebar from './Sidebar';
-import Header from './Header';
-import DashboardContent from './DashboardContent';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
+import DashboardContent from '../components/DashboardContent';
 
 export default function Dashboard() {
   return (
