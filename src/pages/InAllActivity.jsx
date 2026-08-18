@@ -1,5 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
@@ -351,7 +352,7 @@ export default function InAllActivity() {
                   </div>
                 </td>
               </tr>
-            <tbody>
+            </tbody>
           </table>
         </div>
       </div>
@@ -941,71 +942,11 @@ export default function InAllActivity() {
       </div>
       
     </div>
-  </div>
+   </div>
 </div>
 
-<footer className="footer">
-    <div className="container">
-      <div className="row">
-        <div className="py-1 px-1 text-center col-12">
-          <p className="mb-0 fs-3">Copyright © All rights reserved by </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+<Footer />
   </div>
-
-  
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-
-  
-  <script src="../assets/js/popper.min.js"></script>
-  
-  <script src="../assets/js/bootstrap.bundle.js"></script>
-
-  
-  <script src="../assets/js/jquery.dataTables.min.js"></script>
-  <script src="../assets/js/dataTables.bootstrap5.min.js"></script>    
-  <script src='https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js'></script>
-  
-
-    
-
-
-
-  
-  <script src="../assets/js/select2.min.js"></script>
-
-  
-  <script src="../assets/js/venobox.min.js"></script>
-
-  
-  <script src="../assets/js/chart.js"></script>
-  <script src="../assets/js/chart-edit.js"></script>
-
-  
-  <script src="../assets/js/moment.min.js"></script>
-  <script src="../assets/js/daterangepicker.min.js"></script>
-
-  <script src="https://unpkg.com/multiple-select@2.1.1/dist/multiple-select.min.js"></script>
-
-  
-  
-
-  
-
-
-  
-
-
-
-
-
-
-
-</div>
-      </div>
     </div>
   );
 }

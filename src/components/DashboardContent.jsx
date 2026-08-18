@@ -1075,15 +1075,6 @@ export default function DashboardContent() {
     </div>
   </div>
 
-  <footer className="footer">
-    <div className="container">
-        <div className="row">
-            <div className="py-1 px-1 text-center col-12">
-                <p className="mb-0 fs-3">Copyright © All rights reserved by </p>
-            </div>
-        </div>
-    </div>
-</footer>
 </div>
 
 <Link to="tel:9925099250" className="glow-on-hover" type="button">

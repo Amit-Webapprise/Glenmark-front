@@ -1,5 +1,6 @@
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function PlaceholderPage({ title }) {
   return (
@@ -15,6 +16,7 @@ export default function PlaceholderPage({ title }) {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

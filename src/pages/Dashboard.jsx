@@ -1,5 +1,6 @@
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import DashboardContent from '../components/DashboardContent';
 
 export default function Dashboard() {
@@ -9,6 +10,7 @@ export default function Dashboard() {
       <div className="body-wrapper">
         <Header />
         <DashboardContent />
+        <Footer />
       </div>
     </div>
   );

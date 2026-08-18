@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import PlaceholderPage from './pages/PlaceholderPage';
 import ManageActivity from './pages/ManageActivity';
+import InAllActivity from './pages/InAllActivity';
 
 function App() {
   return (
